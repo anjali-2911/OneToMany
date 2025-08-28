@@ -1,0 +1,12 @@
+<h1>New Player for <%= @team.name %></h1>
+<%= form_with model: [@team, @player] do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
